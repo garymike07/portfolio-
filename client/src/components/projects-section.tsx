@@ -71,14 +71,14 @@ export default function ProjectsSection() {
         </h2>
         
         {/* Project Filter */}
-        <div className="flex justify-center mb-12">
-          <div className="glass-card p-2 rounded-2xl">
-            <div className="flex gap-2">
+        <div className="flex justify-center mb-8 sm:mb-12">
+          <div className="glass-card p-2 rounded-2xl w-full max-w-md sm:max-w-none">
+            <div className="flex flex-wrap gap-2 justify-center">
               {filters.map((filter) => (
                 <button
                   key={filter.key}
                   onClick={() => setActiveFilter(filter.key)}
-                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  className={`px-3 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base ${
                     activeFilter === filter.key
                       ? "neuro-box text-cyan-400"
                       : "hover:bg-glass"
@@ -93,7 +93,7 @@ export default function ProjectsSection() {
         </div>
         
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {filteredProjects.map((project) => {
             const IconComponent = project.icon;
             return (
