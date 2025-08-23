@@ -10,9 +10,11 @@ import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 import { ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useViewport } from "@/hooks/useViewport";
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const { isMobile } = useViewport();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,12 +48,12 @@ export default function Home() {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 neuro-box p-4 rounded-full text-cyan-400 z-50 transition-all duration-300 ${
+        className={`fixed bottom-4 sm:bottom-8 right-4 sm:right-8 neuro-box p-3 sm:p-4 rounded-full text-cyan-400 z-50 transition-all duration-300 ${
           showScrollTop ? "opacity-100" : "opacity-0"
         }`}
         data-testid="scroll-to-top"
       >
-        <ArrowUp className="text-xl" />
+        <ArrowUp className="text-lg sm:text-xl" />
       </button>
     </div>
   );

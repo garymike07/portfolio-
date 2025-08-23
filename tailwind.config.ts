@@ -70,6 +70,11 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      screens: {
+        'xs': '475px',
+        '3xl': '1600px',
+        '4xl': '1920px',
+      },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },

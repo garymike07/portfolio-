@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useViewport } from "@/hooks/useViewport";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const { isMobile, isTablet } = useViewport();
 
   const navItems = [
     { href: "#home", label: "Home" },
@@ -23,31 +25,59 @@ export default function Navigation() {
     setIsOpen(false);
   };
 
+  // Close mobile menu when switching to desktop view
+  useEffect(() => {
+    if (!isMobile && !isTablet) {
+      setIsOpen(false);
+    }
+  }, [isMobile, isTablet]);
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-glass-border">
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex justify-between items-center">
-          <div className="text-2xl font-bold gradient-text" data-testid="logo">
+          <div className="text-xl sm:text-2xl font-bold gradient-text" data-testid="logo">
             MK
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden lg:flex space-x-6 xl:space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="hover:text-cyan-400 transition-colors duration-300"
+                className="hover:text-cyan-400 transition-colors duration-300 text-sm xl:text-base"
                 data-testid={`nav-${item.label.toLowerCase()}`}
               >
                 {item.label}
               </button>
             ))}
           </div>
+
+          {/* Tablet Navigation - Compact */}
+          <div className="hidden md:flex lg:hidden space-x-4">
+            {navItems.slice(0, 4).map((item) => (
+              <button
+                key={item.href}
+                onClick={() => handleNavClick(item.href)}
+                className="hover:text-cyan-400 transition-colors duration-300 text-sm"
+                data-testid={`nav-${item.label.toLowerCase()}`}
+              >
+                {item.label}
+              </button>
+            ))}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-lg hover:text-cyan-400 transition-colors duration-300"
+              data-testid="tablet-menu-toggle"
+            >
+              <Menu />
+            </button>
+          </div>
           
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-2xl"
+            className="md:hidden text-xl sm:text-2xl"
             onClick={() => setIsOpen(!isOpen)}
             data-testid="mobile-menu-toggle"
           >
@@ -55,14 +85,14 @@ export default function Navigation() {
           </button>
         </div>
         
-        {/* Mobile Navigation */}
+        {/* Mobile/Tablet Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4">
+          <div className="md:hidden mt-4 pb-4 space-y-3 sm:space-y-4">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="block w-full text-left hover:text-cyan-400 transition-colors duration-300"
+                className="block w-full text-left hover:text-cyan-400 transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-glass/20"
                 data-testid={`mobile-nav-${item.label.toLowerCase()}`}
               >
                 {item.label}
