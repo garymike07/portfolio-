@@ -45,6 +45,17 @@ export default function ProjectsSection() {
       icon: Network,
       gradient: "from-green-400/20 to-blue-600/20",
     },
+    {
+      id: 5,
+      title: "NetDev",
+      description: "Modern network engineering resources, tools, and labs for NetOps.",
+      technologies: ["Next.js", "TypeScript", "Tailwind"],
+      category: "web",
+      icon: Code,
+      gradient: "from-cyan-400/20 to-emerald-600/20",
+      isExternal: true,
+      liveUrl: "https://netdev-nine.vercel.app/"
+    },
   ];
 
   const filters = [
