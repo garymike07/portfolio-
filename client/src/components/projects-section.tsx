@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { ExternalLink, Github, Code, TrendingUp, Network } from "lucide-react";
+import { ExternalLink, Github, Code } from "lucide-react";
 import saasLabImage from "@assets/generated_images/Mike_SaaS_Lab_platform_screenshot_6af720a2.png";
+import netdevImage from "@assets/generated_images/netdev_site_screenshot.png";
 
 export default function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -20,33 +21,6 @@ export default function ProjectsSection() {
     },
     {
       id: 2,
-      title: "E-Commerce Platform",
-      description: "Full-stack web application with React frontend and Node.js backend, featuring secure payment integration and admin dashboard.",
-      technologies: ["React", "Node.js", "MongoDB"],
-      category: "web",
-      icon: Code,
-      gradient: "from-purple-400/20 to-blue-600/20",
-    },
-    {
-      id: 3,
-      title: "Analytics Dashboard",
-      description: "Real-time data visualization dashboard for business intelligence with interactive charts and reporting features.",
-      technologies: ["React", "D3.js", "Python"],
-      category: "web",
-      icon: TrendingUp,
-      gradient: "from-green-400/20 to-cyan-600/20",
-    },
-    {
-      id: 4,
-      title: "Network Management System",
-      description: "Comprehensive IT infrastructure monitoring and management system for enterprise environments.",
-      technologies: ["Java", "Spring", "MySQL"],
-      category: "systems",
-      icon: Network,
-      gradient: "from-green-400/20 to-blue-600/20",
-    },
-    {
-      id: 5,
       title: "NetDev",
       description: "Modern network engineering resources, tools, and labs for NetOps.",
       technologies: ["Next.js", "TypeScript", "Tailwind"],
@@ -54,7 +28,8 @@ export default function ProjectsSection() {
       icon: Code,
       gradient: "from-cyan-400/20 to-emerald-600/20",
       isExternal: true,
-      liveUrl: "https://netdev-nine.vercel.app/"
+      liveUrl: "https://netdev-nine.vercel.app/",
+      image: netdevImage
     },
   ];
 
