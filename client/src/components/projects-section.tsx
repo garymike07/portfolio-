@@ -31,6 +31,18 @@ export default function ProjectsSection() {
       liveUrl: "https://netdev-nine.vercel.app/",
       image: netdevImage
     },
+    {
+      id: 3,
+      title: "Legal Ochre",
+      description: "Personal site and portfolio hosted on Vercel.",
+      technologies: ["Next.js", "TypeScript", "Tailwind"],
+      category: "web",
+      icon: Code,
+      gradient: "from-emerald-400/20 to-cyan-600/20",
+      isExternal: true,
+      liveUrl: "https://legal-ochre.vercel.app/",
+      image: undefined
+    },
   ];
 
   const filters = [
