@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ExternalLink, Github, Code } from "lucide-react";
 import saasLabImage from "@assets/generated_images/Mike_SaaS_Lab_platform_screenshot_6af720a2.png";
 import netdevImage from "@assets/generated_images/netdev_site_screenshot.png";
+import legalOchreImage from "@assets/legal_ochre_screenshot.webp";
 
 export default function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -41,7 +42,7 @@ export default function ProjectsSection() {
       gradient: "from-emerald-400/20 to-cyan-600/20",
       isExternal: true,
       liveUrl: "https://legal-ochre.vercel.app/",
-      image: undefined
+      image: legalOchreImage
     },
   ];
 
