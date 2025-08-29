@@ -36,7 +36,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-50 overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <ScrollProgressBar />
       <Navigation />
       <AuroraBackground>
@@ -68,7 +68,7 @@ export default function Home() {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-4 sm:bottom-8 right-4 sm:right-8 neuro-box p-3 sm:p-4 rounded-full text-cyan-400 z-50 transition-all duration-300 ${
+        className={`fixed bottom-4 sm:bottom-8 right-4 sm:right-8 btn-primary p-3 sm:p-4 rounded-full z-50 transition-all duration-300 ${
           showScrollTop ? "opacity-100" : "opacity-0"
         }`}
         data-testid="scroll-to-top"

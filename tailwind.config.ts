@@ -6,9 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
-        serif: ['Georgia', 'serif'],
-        mono: ['Menlo', 'monospace'],
+        sans: ['Inter', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -49,52 +47,12 @@ export default {
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
-        chart: {
-          "1": "var(--chart-1)",
-          "2": "var(--chart-2)",
-          "3": "var(--chart-3)",
-          "4": "var(--chart-4)",
-          "5": "var(--chart-5)",
-        },
-        glass: "var(--glass)",
-        "glass-border": "var(--glass-border)",
-        "neuro-light": "var(--neuro-light)",
-        "neuro-dark": "var(--neuro-dark)",
       },
       animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'slide-up': 'slideUp 0.6s ease-out',
-        'fade-in': 'fadeIn 0.8s ease-out',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      screens: {
-        'xs': '475px',
-        '3xl': '1600px',
-        '4xl': '1920px',
-      },
       keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        glow: {
-          'from': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.4)' },
-          'to': { boxShadow: '0 0 30px rgba(59, 130, 246, 0.8)' },
-        },
-        slideUp: {
-          'from': { opacity: '0', transform: 'translateY(30px)' },
-          'to': { opacity: '1', transform: 'translateY(0)' },
-        },
-        fadeIn: {
-          'from': { opacity: '0' },
-          'to': { opacity: '1' },
-        },
-        'fade-in-stagger': {
-          '0%': { opacity: '0', transform: 'translateY(10px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
