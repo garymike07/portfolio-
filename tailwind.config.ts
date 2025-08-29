@@ -6,8 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
         serif: ['Georgia', 'serif'],
         mono: ['Menlo', 'monospace'],
       },
@@ -91,6 +90,10 @@ export default {
         fadeIn: {
           'from': { opacity: '0' },
           'to': { opacity: '1' },
+        },
+        'fade-in-stagger': {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         "accordion-down": {
           from: { height: "0" },
