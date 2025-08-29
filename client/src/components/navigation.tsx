@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useViewport } from "@/hooks/useViewport";
+import { Logo } from "@/assets/logo";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +37,7 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-glass-border">
       <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex justify-between items-center">
-          <img src="/assets/new_logo.png" alt="Logo" className="h-8 w-8" />
+          <Logo />
           
           {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-6 xl:space-x-8">

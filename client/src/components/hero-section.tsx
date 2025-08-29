@@ -27,20 +27,22 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="text-center lg:text-left animate-slide-up order-2 lg:order-1">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6">
-              <span className="gradient-text" data-testid="hero-name">Mike Kagera</span>
-            </h1>
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light mb-6 sm:mb-8 text-slate-300" data-testid="hero-title">
-              ICT Professional & Software Developer
-            </h2>
-            <p className="text-base sm:text-lg text-slate-400 mb-8 sm:mb-12 max-w-2xl mx-auto lg:mx-0" data-testid="hero-description">
-              Passionate about using ICT to improve public service delivery, drive organizational efficiency, and empower users through smart, sustainable tech solutions.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
-              <button 
+            <div className="space-y-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6">
+                <span className="gradient-text" data-testid="hero-name">Mike Kagera</span>
+              </h1>
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light mb-6 sm:mb-8 text-slate-300" data-testid="hero-title">
+                ICT Professional & Software Developer
+              </h2>
+              <p className="text-base sm:text-lg text-slate-400 mb-8 sm:mb-12 max-w-2xl mx-auto lg:mx-0" data-testid="hero-description">
+                Passionate about using ICT to improve public service delivery, drive organizational efficiency, and empower users through smart, sustainable tech solutions. I am a dedicated and results-oriented ICT professional with a proven track record of success in managing and implementing innovative technology solutions.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start mt-8">
+              <button
                 onClick={handleDownloadResume}
-                className="neuro-box hover-lift px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3"
+                className="neuro-box hover-lift px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 animate-fade-in-stagger"
+                style={{ animationDelay: '0.6s' }}
                 data-testid="button-download-resume"
               >
                 <Download className="text-lg sm:text-xl" />
@@ -48,7 +50,8 @@ export default function HeroSection() {
               </button>
               <button 
                 onClick={handleViewProjects}
-                className="glass-card hover-lift px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold border border-glass-border rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3"
+                className="glass-card hover-lift px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold border border-glass-border rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 animate-fade-in-stagger"
+                style={{ animationDelay: '0.7s' }}
                 data-testid="button-view-projects"
               >
                 <Eye className="text-lg sm:text-xl" />
@@ -61,7 +64,8 @@ export default function HeroSection() {
                 href="https://linkedin.com/in/mr-mike-654bb2344" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="neuro-inset p-3 sm:p-4 text-xl sm:text-2xl hover:text-cyan-400 transition-colors duration-300"
+                className="neuro-inset p-3 sm:p-4 text-xl sm:text-2xl hover:text-cyan-400 transition-colors duration-300 animate-fade-in-stagger"
+                style={{ animationDelay: '0.8s' }}
                 data-testid="link-linkedin"
               >
                 <Linkedin />
@@ -70,14 +74,16 @@ export default function HeroSection() {
                 href="https://github.com/garymike07" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="neuro-inset p-3 sm:p-4 text-xl sm:text-2xl hover:text-cyan-400 transition-colors duration-300"
+                className="neuro-inset p-3 sm:p-4 text-xl sm:text-2xl hover:text-cyan-400 transition-colors duration-300 animate-fade-in-stagger"
+                style={{ animationDelay: '0.9s' }}
                 data-testid="link-github"
               >
                 <Github />
               </a>
               <a 
                 href="mailto:wrootmike@gmail.com"
-                className="neuro-inset p-3 sm:p-4 text-xl sm:text-2xl hover:text-cyan-400 transition-colors duration-300"
+                className="neuro-inset p-3 sm:p-4 text-xl sm:text-2xl hover:text-cyan-400 transition-colors duration-300 animate-fade-in-stagger"
+                style={{ animationDelay: '1s' }}
                 data-testid="link-email"
               >
                 <Mail />
