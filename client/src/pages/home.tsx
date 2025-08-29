@@ -11,6 +11,9 @@ import Footer from "@/components/footer";
 import { ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useViewport } from "@/hooks/useViewport";
+import { AnimatedSection } from "@/components/ui/animated-section";
+import { AuroraBackground } from "@/components/ui/aurora-background";
+import { ScrollProgressBar } from "@/components/ui/scroll-progress";
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -34,15 +37,32 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-slate-900 text-slate-50 overflow-x-hidden">
+      <ScrollProgressBar />
       <Navigation />
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ExperienceSection />
-      <EducationSection />
-      <ProjectsSection />
-      <DocumentsSection />
-      <ContactSection />
+      <AuroraBackground>
+        <HeroSection />
+      </AuroraBackground>
+      <AnimatedSection className="container-responsive py-16">
+        <AboutSection />
+      </AnimatedSection>
+      <AnimatedSection className="container-responsive py-16" staggerChildren>
+        <SkillsSection />
+      </AnimatedSection>
+      <AnimatedSection className="container-responsive py-16" staggerChildren>
+        <ExperienceSection />
+      </AnimatedSection>
+      <AnimatedSection className="container-responsive py-16">
+        <EducationSection />
+      </AnimatedSection>
+      <AnimatedSection className="container-responsive py-16" staggerChildren>
+        <ProjectsSection />
+      </AnimatedSection>
+      <AnimatedSection className="container-responsive py-16">
+        <DocumentsSection />
+      </AnimatedSection>
+      <AnimatedSection className="container-responsive py-16">
+        <ContactSection />
+      </AnimatedSection>
       <Footer />
       
       {/* Scroll to Top Button */}
