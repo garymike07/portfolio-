@@ -65,4 +65,8 @@ export default {
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  safelist: [
+    'hover:bg-primary/90',
+    'hover:bg-secondary/90'
+  ]
 } satisfies Config;
