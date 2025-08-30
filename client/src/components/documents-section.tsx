@@ -1,4 +1,4 @@
-import { Download, FileText, GraduationCap, Award, Briefcase, FileCode, FileCertificate, FileCheck } from "lucide-react";
+import { Download, FileText, GraduationCap, Award, Briefcase, File, BookOpen, FileCheck } from "lucide-react";
 
 export default function DocumentsSection() {
   const documentCategories = [
@@ -20,7 +20,7 @@ export default function DocumentsSection() {
           id: 2,
           title: "Professional Portfolio",
           description: "Comprehensive portfolio showcasing my projects and technical skills",
-          icon: FileCode,
+          icon: File,
           color: "text-purple-400",
           downloadUrl: "/api/portfolio",
           filename: "Mike_Kagera_Portfolio.pdf",
@@ -72,7 +72,7 @@ export default function DocumentsSection() {
           id: 6,
           title: "Web Development Certification",
           description: "Full-Stack Web Development certification from freeCodeCamp",
-          icon: FileCertificate,
+          icon: BookOpen,
           color: "text-red-400",
           downloadUrl: "/api/webdev-cert",
           filename: "Mike_Kagera_WebDev_Certificate.pdf",
