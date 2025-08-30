@@ -25,7 +25,7 @@ export default function HeroSection() {
               Full-Stack Developer & IT Specialist
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0" data-testid="hero-description">
-              I build modern, responsive, and user-friendly web applications. Let's work together to bring your ideas to life.
+              Crafting modern web applications with React, Next.js, and Node.js while providing robust IT infrastructure solutions. Passionate about creating seamless user experiences and solving complex technical challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
@@ -52,6 +52,7 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 data-testid="link-linkedin"
+                aria-label="LinkedIn Profile"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
@@ -61,6 +62,7 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 data-testid="link-github"
+                aria-label="GitHub Profile"
               >
                 <Github className="w-6 h-6" />
               </a>
@@ -68,6 +70,7 @@ export default function HeroSection() {
                 href="mailto:wrootmike@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 data-testid="link-email"
+                aria-label="Email Contact"
               >
                 <Mail className="w-6 h-6" />
               </a>
